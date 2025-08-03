@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",            // Specify the JavaScript language version for output (ES2020 features)
+    "module": "CommonJS",          // Set the module system to CommonJS (used by Node.js)
+    "rootDir": "./src",            // The root folder where TypeScript source files are located
+    "outDir": "./dist",            // The folder where compiled JavaScript files will be placed
+    "strict": true,                // Enable all strict type-checking options for better type safety
+    "esModuleInterop": true,       // Allow default imports from CommonJS modules, improving compatibility
+    "skipLibCheck": true           // Skip type checking of all declaration files (*.d.ts) for faster compilation
+  }
+}
