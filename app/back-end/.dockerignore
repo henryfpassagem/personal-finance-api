@@ -1,0 +1,9 @@
+# Avoids files to be copied to the container, making the image lighter
+node_modules
+dist
+npm-debug.log
+.env
+.DS_STORE
+.git
+.gitignore
+.vscode

@@ -1,0 +1,21 @@
+#Use the image node:16.14-alpine as base
+FROM node:16.14-alpine
+
+# Set working directory inside container
+WORKDIR /app-backend
+
+# Copy os package*.json to the container
+COPY package*.json ./
+
+#Install the Node dependencies
+RUN npm install
+
+#Copy the rest of the files to the container
+# (everything except what is ignored in .dockerignore)
+COPY . .
+
+EXPOSE 3000
+
+# Define the command to start the app in development mode
+# It uses the "dev" script defined in package.json (usually ts-node-dev)
+CMD ["npm", "run", "dev"]
