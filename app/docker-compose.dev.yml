@@ -16,11 +16,14 @@ services:
     depends_on:
       - db
     environment:
+      JWT_SECRET: supersecretvalue
       DB_HOST: db
       DB_USER: root
       DB_PASSWORD: root
       DB_NAME: personal_finance_dev
       DB_PORT: 3306
+    # env_file:
+    #   - .back-end/env
 
   db:
     image: mysql:8.0
